@@ -27,7 +27,7 @@ public class ManagerService {
     private final ManagerRepository managerRepository;
     private final UserRepository userRepository;
     private final TodoRepository todoRepository;
-
+////////////////////////////////////////////////////
     @Transactional
     public ManagerSaveResponse saveManager(AuthUser authUser, long todoId, ManagerSaveRequest managerSaveRequest) {
         // 일정을 만든 유저
@@ -54,7 +54,7 @@ public class ManagerService {
                 new UserResponse(managerUser.getId(), managerUser.getEmail())
         );
     }
-
+////////////////////////////////////////////////////
     @Transactional(readOnly = true)
     public List<ManagerResponse> getManagers(long todoId) {
         Todo todo = todoRepository.findById(todoId)
